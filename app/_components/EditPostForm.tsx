@@ -17,7 +17,7 @@ const EditPostForm = ({title,content,authorId,id}:{title:string,content:string,a
     const router = useRouter()
     useEffect(()=>{
         if(state.success){
-             toast.success('Post created!', {
+             toast.success('Post edited!', {
                 position: 'top-right',
             });
             router.push('/dashboard')
@@ -26,14 +26,14 @@ const EditPostForm = ({title,content,authorId,id}:{title:string,content:string,a
 
   return (
     <form action={formAction} className="card-body">
-        <input type='number' name='authorId' defaultValue={authorId}/>
-        <input type='number' name='id' defaultValue={id}/>
+        <input hidden type='number' name='authorId' defaultValue={authorId}/>
+        <input hidden type='number' name='id' defaultValue={id}/>
           <label className="label">Title</label>
           <input type="text" name='title' className="input bg-background-fade w-full" placeholder="Title" defaultValue={title}/>
           <label className="label">Content</label>
           <textarea name='content' className="input bg-background-fade w-full min-h-50" placeholder="Content" defaultValue={content} />
           {state.error && <p className='text-red-700 text-center mt-4 '>{state.error}</p>}
-          <button type='submit' className="btn btn-primary mt-4">{isPending?'Posting...':"Post"}</button>
+          <button type='submit' className="btn btn-primary mt-4">{isPending?'Editing...':"Edit Post"}</button>
       </form>
   )
 }
