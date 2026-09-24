@@ -205,7 +205,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 // After (v7)
-import { PrismaClient } from '../generated/prisma/client'
+import { PrismaClient } from '@/app/generated/prisma/client'
 import { PrismaPg } from '@prisma/adapter-pg'
 
 const adapter = new PrismaPg({
@@ -218,7 +218,7 @@ const prisma = new PrismaClient({ adapter })
 ### 7. Replace Prisma.validator with satisfies
 
 ```typescript
-import { Prisma } from '../generated/prisma/client'
+import { Prisma } from '@/app/generated/prisma/client'
 
 const userSelect = {
   id: true,

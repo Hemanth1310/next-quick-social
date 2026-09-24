@@ -79,7 +79,7 @@ generator client {
 ### Server Code
 
 ```typescript
-import { PrismaClient } from '../generated/prisma/client'
+import { PrismaClient } from '@/app/generated/prisma/client'
 ```
 
 ### Browser-Safe Types

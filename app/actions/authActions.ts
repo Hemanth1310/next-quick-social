@@ -1,6 +1,6 @@
 "use server"
 
-import { Prisma } from "../generated/prisma/client"
+import { Prisma } from "@/app/generated/prisma/client"
 import prisma from "../_lib/prisma"
 import { clearSession, setSession } from "../_lib/sessions"
 import { InitialStateType } from "../types"

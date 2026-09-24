@@ -87,7 +87,7 @@ generator client {
 - Import Prisma Client from your generated output path, for example:
 
 ```typescript
-import { PrismaClient } from '../generated/prisma/client'
+import { PrismaClient } from '@/app/generated/prisma/client'
 ```
 
 ### Compiler Build Tuning
@@ -161,7 +161,7 @@ generated/
 Import the client:
 
 ```typescript
-import { PrismaClient, Prisma } from '../generated/prisma/client'
+import { PrismaClient, Prisma } from '@/app/generated/prisma/client'
 ```
 
 Import browser-safe types:

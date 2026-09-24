@@ -116,7 +116,7 @@ export default defineConfig({
 
 2. Update imports throughout your codebase:
    ```typescript
-   import { PrismaClient } from '../generated/prisma/client'
+   import { PrismaClient } from '@/app/generated/prisma/client'
    ```
 
 3. Update `.gitignore` if you manage this manually:
@@ -126,7 +126,7 @@ export default defineConfig({
 
 4. Replace `Prisma.validator()` with TypeScript `satisfies` when using `prisma-client`:
    ```typescript
-   import { Prisma } from '../generated/prisma/client'
+   import { Prisma } from '@/app/generated/prisma/client'
 
    const userSelect = {
      id: true,

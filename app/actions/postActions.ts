@@ -2,7 +2,7 @@
 
 import prisma from "../_lib/prisma"
 import { getSession } from "../_lib/sessions"
-import { Prisma } from "../generated/prisma/client"
+import { Prisma } from "@/app/generated/prisma/client"
 import { InitialStateType } from "../types"
 
 export const createPostAction = async(prevState:InitialStateType, formData:FormData) => {
